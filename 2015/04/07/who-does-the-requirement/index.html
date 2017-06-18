@@ -1,0 +1,910 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="gkh7dqeS2Kn342fSoe_eywl-a-EMteb9xKqXM0pAmf0" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="需求分析,文档," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="半天成" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="这几天，实验室新接到了一个项目，目前正处于需求分析阶段。已经和项目的甲方连着开了几次会，也基本上明确了甲方的基本需求，今天又让我们总结文档，但是却写得焦头烂额，发现需求这个问题是比较麻烦的，所以有一些思考，在这里记录一下。 首先申明，由于这两天实在是有太多事情了，所以没有时间去查询那些前辈们的成果，本文中描述的都是一些自以为是的观点和想法。 需求分析应该由谁来做上周第一次和老师去甲方单位做需求分析">
+<meta name="keywords" content="需求分析,文档">
+<meta property="og:type" content="article">
+<meta property="og:title" content="谁来做需求分析">
+<meta property="og:url" content="https://shoumu.github.io/2015/04/07/who-does-the-requirement/index.html">
+<meta property="og:site_name" content="半天成">
+<meta property="og:description" content="这几天，实验室新接到了一个项目，目前正处于需求分析阶段。已经和项目的甲方连着开了几次会，也基本上明确了甲方的基本需求，今天又让我们总结文档，但是却写得焦头烂额，发现需求这个问题是比较麻烦的，所以有一些思考，在这里记录一下。 首先申明，由于这两天实在是有太多事情了，所以没有时间去查询那些前辈们的成果，本文中描述的都是一些自以为是的观点和想法。 需求分析应该由谁来做上周第一次和老师去甲方单位做需求分析">
+<meta property="og:updated_time" content="2016-04-05T15:43:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="谁来做需求分析">
+<meta name="twitter:description" content="这几天，实验室新接到了一个项目，目前正处于需求分析阶段。已经和项目的甲方连着开了几次会，也基本上明确了甲方的基本需求，今天又让我们总结文档，但是却写得焦头烂额，发现需求这个问题是比较麻烦的，所以有一些思考，在这里记录一下。 首先申明，由于这两天实在是有太多事情了，所以没有时间去查询那些前辈们的成果，本文中描述的都是一些自以为是的观点和想法。 需求分析应该由谁来做上周第一次和老师去甲方单位做需求分析">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://shoumu.github.io/2015/04/07/who-does-the-requirement/"/>
+
+
+
+
+
+  <title>谁来做需求分析 | 半天成</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?4bbcb32cf9a8d5156e72ae4ec9f4a2e3";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">半天成</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">资之深，则取之左右逢其源</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'VVCtkEUZz6sU6ezUQkZt','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://shoumu.github.io/2015/04/07/who-does-the-requirement/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="shoumu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="半天成">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">谁来做需求分析</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-04-07T22:48:37+08:00">
+                2015-04-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/产品经理/" itemprop="url" rel="index">
+                    <span itemprop="name">产品经理</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这几天，实验室新接到了一个项目，目前正处于需求分析阶段。已经和项目的甲方连着开了几次会，也基本上明确了甲方的基本需求，今天又让我们总结文档，但是却写得焦头烂额，发现需求这个问题是比较麻烦的，所以有一些思考，在这里记录一下。</p>
+<p>首先申明，由于这两天实在是有太多事情了，所以没有时间去查询那些前辈们的成果，本文中描述的都是一些自以为是的观点和想法。</p>
+<h1 id="需求分析应该由谁来做"><a href="#需求分析应该由谁来做" class="headerlink" title="需求分析应该由谁来做"></a>需求分析应该由谁来做</h1><p>上周第一次和老师去甲方单位做需求分析的时候，甲方拿出了一个文档，上面写着他们单位每个人的分工，然后就看见了他们那边的人有产品总监、产品经理等等各种角色，也对，既然别人是甲方，那么获得一个头衔也是应该的。然后对方产品经理就拿出了一个文档，突然就发现对方已经做了很多了啊，有一些产品经理的感觉啊。然后第一天的工作，除了熟悉他们现有的系统的业务功能外，我们就在看他们的那份文档，文档中就列出很多的功能，比如说希望新的系统相对原有的系统的某个页面要怎么修改之类的。还真别说，有一些还真的写得挺清楚的。可是，这个会开了一天，我确越来越糊涂。后来回来的时候，我给老师说，我感觉需求分析应该是由我们来做，他们能做的就是让我们熟悉业务上的内容以及提出一些他们的要求。老师说，他们的需求分析已经做得挺好的了，他做了这么多项目，这个算是挺好的了。那么需求分析到底是应该由谁来做呢？</p>
+<a id="more"></a>
+<p>关于这个问题，我认为需求分析是一个比较专业的过程，因为需求分析的结果会直接作用到后面的阶段，可以说需求分析的好坏，会直接影响到后面的项目的推进，所以需求分析应该我们来做也就显而易见了。我自己将甲方给出的这一个报告看做是需求要点，就是他们期望的一些内容，具体一点说就是产品最终表现形态上的内容。但是要用这个文档来作为需求分析，那时万万不可行的。这样的文档往往具有下面的一些特点：</p>
+<ul>
+<li><p>过多地关注界面层次的东西，比如说这里应该放个什么按钮，那里应该放个文本框。实际上这种东西应该交给UE、设计人员来做，而不是需求层次的功能。</p>
+</li>
+<li><p>功能逻辑划分不清，拿网页来说，很容易出现功能重叠的需求。</p>
+</li>
+<li><p>领域分析深度不够，很多时候都会出现我以为、我认为、我觉得之类的字样（虽然这篇文章中也有很多这些资阳，囧），这恰好是说明没有做好领域分析工作，更多的是个人的主观看法，这样的分析有多少可信度。</p>
+</li>
+</ul>
+<p>在现在的互联网环境中，其实这样的例子是非常多的，特别是现在，互联网的环境异常的浮躁，”人人都是产品经理”，这句话真的是一个讽刺，如果是一个产品经理提出这样的话，我真的想呵呵。我个人认为，产品经理绝对是一门有一定的专业性要求的工作。换成”人人都能怀着对美好事物的追求”我觉得还是可以的。</p>
+<p>上面说了那么多，简单点说就是<strong>需求分析的工作还是应该交给专业人士来完成的</strong>。</p>
+<p>那么作为甲方应该做什么呢？甲方应该是给做需求分析放提供详尽的关于业务方面的知道。这里的业务往细了说就是甲方卖出一个产品的具体过程是什么样的。写到这里，突然想起了本科时候一个老师说过的关于另外一个经常接校外项目的老师的话，”每接到一个新的项目，那么这个老师就能够在半年内成为这个领域的专家”。我觉得这说的就是这个老师对业务的摸索很厉害，真的很佩服这个老师。</p>
+<p>换另外一个话题，如今的计算机行业中存在很多的外包公司，这些外包公司往往就是直接去实现用户要求的一些功能而已。我认为一个好的外包公司，也要能够做好需求分析的工作。</p>
+<h1 id="传统的需求分析"><a href="#传统的需求分析" class="headerlink" title="传统的需求分析"></a>传统的需求分析</h1><p>上面提到了需求分析由谁来做的问题，接下来就是需求分析要怎么做的问题。其实我脑子里也没有什么太清楚的概念。上学期上了高等软件工程的课，老师是这样要求我们做需求分析的。首先在需求分析以前，老师要求我们要做领域分析，领域分析就是和行业相关、和课题相关的一些内容。比如我们上学期的课程项目选了”多电梯调度系统”，在领域分析中就调研了电梯的各种参数的要求，电梯的调度过程等内容。然后根据领域分析报告来完成需求分析，在需求分析中，主要采用UML来建模（其实看看这个过程，也能够得到上面的那个问题的答案就是应该由专业的人来做），我们使用了UML中的用例图、状态图、类图等来完成需求分析，并且对于用例图，用RUCM进行了详细的规格说明，将每个用例的前置条件、后置条件、参与者、流程等等内容都详细地描述出来了。最后形成了需求分析文档。</p>
+<p>受限于我现阶段的知识储备，可能真正的需求分析过程还没有完全地描述出来。但总的来看，传统的需求分析的过程实际上是非常麻烦的过程。但是对于传统的一些项目，比如嵌入式领域的一些项目，这个过程又是必不可少的。</p>
+<h1 id="敏捷情景下的需求分析"><a href="#敏捷情景下的需求分析" class="headerlink" title="敏捷情景下的需求分析"></a>敏捷情景下的需求分析</h1><p>上面看到了一个我经历的教学性质的传统的需求分析过程。那么在现在的互联网环境中，需要怎样的需求分析呢？互联网公司中，考虑到产品上线的需求，所以很多时候采用敏捷开发的模式，这种模式追求快速地迭代，显然是没有更多的时间来做完整的需求分析的，所以我觉得需求分析过程会进行一定程度的简化，但是具体做需求分析的流程呢，等我回头研究一下再说。：p</p>
+<h1 id="文档的书写"><a href="#文档的书写" class="headerlink" title="文档的书写"></a>文档的书写</h1><p>好的文档能够很好地指导真个开发过程，但是坏的文档可能就是一个灾难了，不仅仅是浪费很多时间在写文档上面，更会将项目过程搅乱，所以总结一下<strong>写文档也是一门艺术</strong>。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      shoumu
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://shoumu.github.io/2015/04/07/who-does-the-requirement/" title="谁来做需求分析">https://shoumu.github.io/2015/04/07/who-does-the-requirement/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/需求分析/" rel="tag"># 需求分析</a>
+          
+            <a href="/tags/文档/" rel="tag"># 文档</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/02/05/the-reborn-blog/" rel="next" title="博客新生">
+                <i class="fa fa-chevron-left"></i> 博客新生
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/05/26/the-use-of-log4j/" rel="prev" title="log4j使用">
+                log4j使用 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar/avatar.jpeg"
+               alt="shoumu" />
+          <p class="site-author-name" itemprop="name">shoumu</p>
+           
+              <p class="site-description motion-element" itemprop="description">make a difference</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/shoumu/" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/shoumuzyq" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/zhang-yong-qiang-67" target="_blank" title="ZhiHu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  ZhiHu
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.evercoding.net" title="天外天" target="_blank">天外天</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.hekunxi.cn" title="HRZ在哪里" target="_blank">HRZ在哪里</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://theme-next.iissnan.com/theme-settings.html" title="Next" target="_blank">Next</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#需求分析应该由谁来做"><span class="nav-number">1.</span> <span class="nav-text">需求分析应该由谁来做</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#传统的需求分析"><span class="nav-number">2.</span> <span class="nav-text">传统的需求分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#敏捷情景下的需求分析"><span class="nav-number">3.</span> <span class="nav-text">敏捷情景下的需求分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文档的书写"><span class="nav-number">4.</span> <span class="nav-text">文档的书写</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2013 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">shoumu</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
